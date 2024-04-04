@@ -1,0 +1,380 @@
+/* body{
+    background-image: url("./bg3.jpeg");
+    background-repeat: no-repeat;
+   
+    height: 100vh;
+    background-size: 100% 100%;
+    z-index: -1;
+} */
+
+#textInput{
+  
+    background-color: rgba(0, 0, 0, 0.455);
+    border-radius: 10px; /* Adjust the border radius */
+    color: white;
+    border-color: black;
+    border-style: double;
+    margin-left: 10px;
+    margin-top: 8px; 
+    width: calc(100% - 20px); /* Adjust the width to fit the viewport */
+    max-width: 500px; /* Set a maximum width */
+    padding: 10px; /* Add padding */
+   
+    
+}
+#output{
+    background-color: rgba(0, 0, 0, 0.455);
+    border-radius: 10px;
+    color: white;
+    position: fixed;
+    bottom: 10px; /* Adjust the distance from the bottom */
+    right: 10px; /* Adjust the distance from the right */
+    border-color: black;
+    border-style: double;
+    /* margin-bottom: 5%; */
+    width: calc(100% - 20px); /* Adjust the width to fit the viewport */
+    max-width: 500px; /* Set a maximum width */
+}
+#btn_pos {
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#btn_pos button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.455);
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+#btn_pos button:hover {
+    transform: scale(1.1); /* Zoom in by 10% on hover */
+}
+.mycontainer {
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(30px);
+}
+/* .neon {
+    color: #fff;
+    text-shadow:
+        0 0 5px #000000,
+        0 0 10px #000000,
+        0 0 20px #000000,
+        0 0 40px rgb(84, 6, 126),
+        0 0 80px rgb(84, 6, 126),
+        0 0 90px rgb(84, 6, 126),
+        0 0 100px rgb(84, 6, 126),
+        0 0 100px rgb(84, 6, 126),
+        0 0 100px rgb(84, 6, 126),
+        0 0 150px rgb(84, 6, 126);
+} */
+
+/* .owner {
+    padding: 0.5%;
+    text-align: center;
+   
+    align-items: center;
+    justify-content: center;
+  
+} */
+.dotlottie-player {
+    width: 300px;
+    height: 300px;
+}
+
+@media (max-width: 1197px) {
+ 
+    #textInput {
+        height: 150px; /* Adjust the height for smaller screens */
+        width: calc(100% - 20px); /* Adjust the width for smaller screens */
+        max-width: 300px; /* Set a maximum width for smaller screens */
+    }
+
+    #output {
+        height: 150px; /* Adjust the height for smaller screens */
+        width: calc(100% - 20px); /* Adjust the width for smaller screens */
+        max-width: 300px; /* Set a maximum width for smaller screens */
+    }
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,600");
+
+body {
+	font-family: Poppins;
+	background-image: url("https://images.unsplash.com/photo-1516124540143-26bf0c56ea23?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg1MzI3Mzd8&ixlib=rb-4.0.3&q=85");
+	background-size: 100vw;
+	background-color: white;
+	margin: 0px;
+	padding: none;
+	color: white;
+    background-repeat: no-repeat;
+   
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+nav {
+	transition: backdrop-filter 0.3s ease;
+	display: flex;
+	background-color: rgba(200, 210, 220, 0.2);
+	padding: 0px;
+	justify-content: center;
+	z-index: 1;
+	backdrop-filter: blur(
+		2px
+	); /* Disable this to have a Macos-like top bar
+	border-radius: 0px 0px 10px 10px;
+	border-top: none;
+	margin-left: 50px;
+	margin-right: 50px;*/
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 1px 10px 10px rgba(0, 20, 50, 0.1);
+	min-height: 50px;
+	width: 100vw;
+	align-items: center;
+    text-align: center;
+}
+
+nav:hover {
+	backdrop-filter: blur(8px);
+}
+
+nav a {
+	z-index: 2;
+	transition: border 0.2s ease;
+	text-decoration: none;
+	color: white;
+	padding: 15px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	margin-left: 5px;
+	border: 1px solid rgba(255, 255, 255, 0);
+	border-radius: 999px;
+}
+
+nav a:hover {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 999px;
+	backdrop-filter: blur(8px);
+}
+dotlottie-player.lot {
+    height: 100px !important; /* Adjust the height as per your requirement */
+    /* left: 0px; */
+    /* transform: translateX(-170%); */
+
+
+}
+/* h1 {
+	margin: 50px;
+	font-size: 50px;
+	font-weight: 600;
+}
+
+button {
+	transition: backdrop-filter 0.3s ease;
+	font-family: poppins;
+	margin-left: 50px;
+	border: none;
+	border-radius: 9999px;
+	padding: 10px 32px;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: rgba(200, 210, 250, 0.2);
+	backdrop-filter: blur(2px);
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+button:hover {
+	backdrop-filter: blur(8px);
+} */
+/* Style Snowballs and Snowflakes */
+  
+.snow-ball-container .snow-ball { 
+    position: absolute; 
+    height: 10px; 
+    width: 10px; 
+    border-radius: 50%; 
+    background: white; 
+  
+} 
+  
+.snow-ball-container .snow-ball:nth-child(even) { 
+    position: absolute; 
+    width: 16px; 
+    height: 16px; 
+    animation: flake-motion 15s linear infinite; 
+} 
+  
+/* Position the Snowballs above the screen */
+  
+.snow-ball-container .snow-ball:nth-child(1) { 
+    top: -50%; 
+    left: 5%; 
+    width: 20px; 
+    height: 20px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(2) { 
+    top: -20%; 
+    left: 10%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(3) { 
+    top: -50%; 
+    left: 15%; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(4) { 
+    top: -10%; 
+    left: 20%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(5) { 
+    top: -20%; 
+    left: 25%; 
+    width: 20px; 
+    height: 20px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(6) { 
+    top: -40%; 
+    left: 30%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(7) { 
+    top: -30%; 
+    left: 35%; 
+    width: 5px; 
+    height: 5px; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(8) { 
+    top: -20%; 
+    left: 40%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(9) { 
+    top: -50%; 
+    left: 45%; 
+    width: 5px; 
+    height: 5px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(10) { 
+    top: -5%; 
+    left: 50%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(11) { 
+    top: -20%; 
+    left: 60%; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(12) { 
+    top: -10%; 
+    left: 70%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(13) { 
+    top: -50%; 
+    left: 80%; 
+    width: 5px; 
+    height: 5px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(14) { 
+    top: -20%; 
+    left: 90%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(15) { 
+    top: -50%; 
+    left: 95%; 
+    width: 30px; 
+    height: 30px; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+/* Define animations of Snowball and Snowflakes */
+  
+@keyframes snowball-animation { 
+    0% { 
+        transform: translate(0); 
+        opacity: 1; 
+    } 
+  
+    20% { 
+        transform: translate(4px, 100px); 
+        opacity: 0.8; 
+    } 
+  
+    40% { 
+        transform: translate(-7px, 200px); 
+        opacity: 0.7; 
+    } 
+  
+    60% { 
+        transform: translate(10px, 400px); 
+        opacity: 0.5; 
+    } 
+  
+    80% { 
+        transform: translate(-14px, 700px); 
+        opacity: 0.2; 
+    } 
+  
+    100% { 
+        transform: translate(16px, 900px); 
+        opacity: 0; 
+    } 
+} 
+  
+@keyframes flake-motion { 
+    0% { 
+        transform: translate(-2px, 0); 
+        opacity: 1; 
+    } 
+  
+    20% { 
+        transform: translate(-9px, 200px); 
+        opacity: 0.9; 
+    } 
+  
+    40% { 
+        transform: translate(14px, 300px); 
+        opacity: 0.7; 
+    } 
+  
+    60% { 
+        transform: translate(-22px, 400px); 
+        opacity: 0.6; 
+    } 
+  
+    80% { 
+        transform: translate(30px, 600px); 
+        opacity: 0.5; 
+    } 
+  
+    90% { 
+        transform: translate(-40px 800px); 
+        opacity: 0.3; 
+    } 
+  
+    100% { 
+        transform: translate(52px, 1000px); 
+        opacity: 0; 
+    } 
+}
